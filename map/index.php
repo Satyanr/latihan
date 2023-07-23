@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-info">tambahkan</button>
-                        <a href="#" class="btn btn-danger">Kembali</a>
+                        <button onclick="goBack()" class="btn btn-danger">Kembali</button>
                     </div>
                 </form>
             </div>
@@ -79,6 +79,12 @@
         </div>
     </div>
 
+
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
 
 
     <!-- leaflet js  -->
