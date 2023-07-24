@@ -161,62 +161,76 @@
                 <h4 class="mb-5"><strong>Project & Latihan Saya</strong></h4>
 
                 <div class="row special">
-                    <div class="col-lg-4 col-md-12 mb-4 d-flex align-items-stretch">
+                    <div class="col mb-4 d-flex align-items-stretch">
                         <div class="card h-100">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
+                            <div class="row h-50">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/tnf9spxmoowjfjmtl0i3"
+                                        class="img-fluid" />
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Grafik</h5>
-                                <p class="card-text">
-                                    Di Latihan kali ini kita membuat Grafik dengan menggunakan chartjs.
-                                </p>
-                                <a href="grafik/" class="btn btn-primary">Lihat</a>
+                            <div class="row">
+                                <div class="card-body">
+                                    <h5 class="card-title">Grafik</h5>
+                                    <p class="card-text">
+                                        Di Latihan kali ini kita membuat Grafik dengan menggunakan chartjs.
+                                    </p>
+                                    <a href="grafik/" class="btn btn-primary">Lihat</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                    <div class="col mb-4 d-flex align-items-stretch">
                         <div class="card h-100">
-                            <div class="bg-image hover-overlay ripple-surface" data-mdb-ripple-color="light">
-                                <img src="https://miro.medium.com/v2/resize:fit:480/1*YTnIluRNB5WWn-HhPIkoWQ.png"
-                                    class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
+                            <div class="row h-50">
+                                <div class="bg-image hover-overlay ripple-surface" data-mdb-ripple-color="light">
+                                    <img src="https://miro.medium.com/v2/resize:fit:480/1*YTnIluRNB5WWn-HhPIkoWQ.png"
+                                        class="img-fluid" />
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Membuat Map dengan Leaflet</h5>
-                                <p class="card-text text-wrap ">
-                                    Di Latihan kali ini kita membuat map dengan menggunakan leaflet.
-                                    Tantangan di latihan kali ini adalah kita harus bisa membuat map dengan leaflet dan
-                                    menampilkan custom marker di map tersebut.
-                                    Juga kita di tuntut untuk bisa menambahkan marker secara langsung yang masuk ke
-                                    dalam database dan menampilkan marker tersebut di map.
-                                </p>
-                                <a href="map/" class="btn btn-primary">Lihat</a>
+                            <div class="row">
+                                <div class="card-body">
+                                    <h5 class="card-title">Membuat Map dengan Leaflet</h5>
+                                    <p class="card-text text-wrap ">
+                                        Di Latihan kali ini kita membuat map dengan menggunakan leaflet.
+                                        Tantangan di latihan kali ini adalah kita harus bisa membuat map dengan leaflet
+                                        dan
+                                        menampilkan custom marker di map tersebut.
+                                        Juga kita di tuntut untuk bisa menambahkan marker secara langsung yang masuk ke
+                                        dalam database dan menampilkan marker tersebut di map.
+                                    </p>
+                                    <a href="map/" class="btn btn-primary">Lihat</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="col mb-4">
                         <div class="card h-100">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
+                            <div class="row h-50">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img src="http://www.fpdf.org/title.png" class="img-fluid" />
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.
-                                </p>
-                                <a href="#!" class="btn btn-primary">Button</a>
+                            <div class="row">
+                                <div class="card-body">
+                                    <h5 class="card-title">Membuat Laporan PDF dengan php</h5>
+                                    <p class="card-text">
+                                        Di Latihan kali ini kita membuat map dengan menggunakan libary dari
+                                        http://www.fpdf.org/.
+                                    </p>
+                                    <a href="laporan_pdf/" class="btn btn-primary">Lihat</a>
+                                </div>
                             </div>
                         </div>
                     </div>
