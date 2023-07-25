@@ -3,6 +3,7 @@
 <head>
 	<title>MEMBUAT GRAFIK DARI DATABASE MYSQL DENGAN PHP DAN CHART.JS</title>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
 	<style type="text/css">
@@ -16,19 +17,34 @@
 	</style>
  
  
-	<center>
-		<h2>MEMBUAT GRAFIK DARI DATABASE MYSQL DENGAN PHP DAN CHART.JS<br/>- www.malasngoding.com -</h2>
+	<center class="mb-3">
+		<h2>MEMBUAT GRAFIK DARI DATABASE MYSQL DENGAN PHP DAN CHART.JS</h2>
 	</center>
  
  
 	<?php 
 	include 'koneksi.php';
 	?>
- 
-	<div style="width: 800px;margin: 0px auto;">
-		<canvas id="myChart"></canvas>
+
+	<div class="container text-center">
+		<div class="row">
+			<div class="col">
+			Pie Chart
+				<div class="w-100" style="margin: 0px auto;">
+					<canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="col">
+			Bar Chart
+				<div class="w-100" style="margin: 0px auto;">
+					<canvas id="barChart"></canvas>
+				</div>
+			</div>
+			<div class="col">
+			Column
+			</div>
+		</div>
 	</div>
- 
 	<br/>
 	<br/>
  
@@ -102,5 +118,44 @@
 			}
 		});
 	</script>
+
+	<script>
+		var chrt = document.getElementById("barChart").getContext("2d");
+		var chartId = new Chart(chrt, {
+			type: 'bar',
+			data: {
+				labels: ["Teknik", "Ekonomi","Fisip","Pertanian"],
+				datasets: [{
+				label: "data mahasiswa",
+				data: [
+					<?php 
+					$Teknik = mysqli_query($koneksi,"select * from tbl_latihan_grafik_mahasiswa where fakultas='Teknik'");
+					echo mysqli_num_rows($Teknik);
+					?>,
+					<?php 
+					$Ekonomi = mysqli_query($koneksi,"select * from tbl_latihan_grafik_mahasiswa where fakultas='Ekonomi'");
+					echo mysqli_num_rows($Ekonomi);
+					?>,
+					<?php 
+					$Fisip = mysqli_query($koneksi,"select * from tbl_latihan_grafik_mahasiswa where fakultas='Fisip'");
+					echo mysqli_num_rows($Fisip);
+					?>,
+					<?php 
+					$Pertanian = mysqli_query($koneksi,"select * from tbl_latihan_grafik_mahasiswa where fakultas='Pertanian'");
+					echo mysqli_num_rows($Pertanian);
+					?>
+
+				],
+				backgroundColor: ['lightblue'],
+				borderColor: ['black'],
+				borderWidth: 2,
+				}],
+			},
+			options: {
+				responsive: false,
+			},
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
