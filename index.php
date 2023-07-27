@@ -160,7 +160,7 @@
             <section class="text-center">
                 <h4 class="mb-5"><strong>Project & Latihan Saya</strong></h4>
 
-                <div class="row special">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col mb-4 d-flex align-items-stretch">
                         <div class="card h-100">
                             <div class="row h-50">
@@ -230,6 +230,30 @@
                                         http://www.fpdf.org/.
                                     </p>
                                     <a href="laporan_pdf/" class="btn btn-primary">Lihat</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-4 d-flex align-items-stretch">
+                            <div class="card h-100">
+                                <div class="row h-50">
+                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSTX_Kf1SRSXPcvhMMdvFNO12Sk28NM88vqw&usqp=CAU"
+                                            class="img-fluid" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Digital Signature</h5>
+                                        <p class="card-text">
+                                            Di Latihan kali ini kita membuat Digital Signature
+                                        </p>
+                                        <a href="digital_signature/" class="btn btn-primary">Lihat</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
