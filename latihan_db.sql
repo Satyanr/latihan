@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2023 at 06:01 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Waktu pembuatan: 27 Jul 2023 pada 09.20
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_latihan_grafik_mahasiswa`
+-- Struktur dari tabel `tbl_latihan_digital_signature_employee_sign`
+--
+
+CREATE TABLE `tbl_latihan_digital_signature_employee_sign` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `signature_img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_latihan_digital_signature_employee_sign`
+--
+
+INSERT INTO `tbl_latihan_digital_signature_employee_sign` (`id`, `name`, `signature_img`) VALUES
+(1, 'khyjukhyu', 'upload/khyjukhyu_64c21a4a47205.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_latihan_grafik_mahasiswa`
 --
 
 CREATE TABLE `tbl_latihan_grafik_mahasiswa` (
@@ -33,10 +53,10 @@ CREATE TABLE `tbl_latihan_grafik_mahasiswa` (
   `nim` varchar(255) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `fakultas` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_latihan_grafik_mahasiswa`
+-- Dumping data untuk tabel `tbl_latihan_grafik_mahasiswa`
 --
 
 INSERT INTO `tbl_latihan_grafik_mahasiswa` (`id`, `nama`, `nim`, `jenis_kelamin`, `fakultas`) VALUES
@@ -64,7 +84,7 @@ INSERT INTO `tbl_latihan_grafik_mahasiswa` (`id`, `nama`, `nim`, `jenis_kelamin`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_latihan_map_lokasi`
+-- Struktur dari tabel `tbl_latihan_map_lokasi`
 --
 
 CREATE TABLE `tbl_latihan_map_lokasi` (
@@ -73,10 +93,10 @@ CREATE TABLE `tbl_latihan_map_lokasi` (
   `nama_tempat` varchar(255) NOT NULL,
   `kategori` varchar(255) NOT NULL,
   `keterangan` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_latihan_map_lokasi`
+-- Dumping data untuk tabel `tbl_latihan_map_lokasi`
 --
 
 INSERT INTO `tbl_latihan_map_lokasi` (`id`, `lat_long`, `nama_tempat`, `kategori`, `keterangan`) VALUES
@@ -91,7 +111,7 @@ INSERT INTO `tbl_latihan_map_lokasi` (`id`, `lat_long`, `nama_tempat`, `kategori
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_latihan_pdf_karyawan`
+-- Struktur dari tabel `tbl_latihan_pdf_karyawan`
 --
 
 CREATE TABLE `tbl_latihan_pdf_karyawan` (
@@ -99,10 +119,10 @@ CREATE TABLE `tbl_latihan_pdf_karyawan` (
   `karyawan_nama` varchar(255) NOT NULL,
   `karyawan_alamat` varchar(255) NOT NULL,
   `karyawan_email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_latihan_pdf_karyawan`
+-- Dumping data untuk tabel `tbl_latihan_pdf_karyawan`
 --
 
 INSERT INTO `tbl_latihan_pdf_karyawan` (`karyawan_id`, `karyawan_nama`, `karyawan_alamat`, `karyawan_email`) VALUES
@@ -119,41 +139,53 @@ INSERT INTO `tbl_latihan_pdf_karyawan` (`karyawan_id`, `karyawan_nama`, `karyawa
 --
 
 --
--- Indexes for table `tbl_latihan_grafik_mahasiswa`
+-- Indeks untuk tabel `tbl_latihan_digital_signature_employee_sign`
+--
+ALTER TABLE `tbl_latihan_digital_signature_employee_sign`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tbl_latihan_grafik_mahasiswa`
 --
 ALTER TABLE `tbl_latihan_grafik_mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_latihan_map_lokasi`
+-- Indeks untuk tabel `tbl_latihan_map_lokasi`
 --
 ALTER TABLE `tbl_latihan_map_lokasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_latihan_pdf_karyawan`
+-- Indeks untuk tabel `tbl_latihan_pdf_karyawan`
 --
 ALTER TABLE `tbl_latihan_pdf_karyawan`
   ADD PRIMARY KEY (`karyawan_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tbl_latihan_grafik_mahasiswa`
+-- AUTO_INCREMENT untuk tabel `tbl_latihan_digital_signature_employee_sign`
+--
+ALTER TABLE `tbl_latihan_digital_signature_employee_sign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_latihan_grafik_mahasiswa`
 --
 ALTER TABLE `tbl_latihan_grafik_mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `tbl_latihan_map_lokasi`
+-- AUTO_INCREMENT untuk tabel `tbl_latihan_map_lokasi`
 --
 ALTER TABLE `tbl_latihan_map_lokasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tbl_latihan_pdf_karyawan`
+-- AUTO_INCREMENT untuk tabel `tbl_latihan_pdf_karyawan`
 --
 ALTER TABLE `tbl_latihan_pdf_karyawan`
   MODIFY `karyawan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
