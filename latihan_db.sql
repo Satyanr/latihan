@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jul 2023 pada 09.20
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.2
+-- Generation Time: Jul 27, 2023 at 06:58 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,26 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_latihan_digital_signature_employee_sign`
+-- Table structure for table `tbl_latihan_digital_signature_employee_sign`
 --
 
 CREATE TABLE `tbl_latihan_digital_signature_employee_sign` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `signature_img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_latihan_digital_signature_employee_sign`
+-- Dumping data for table `tbl_latihan_digital_signature_employee_sign`
 --
 
 INSERT INTO `tbl_latihan_digital_signature_employee_sign` (`id`, `name`, `signature_img`) VALUES
-(1, 'khyjukhyu', 'upload/khyjukhyu_64c21a4a47205.png');
+(1, 'khyjukhyu', 'upload/khyjukhyu_64c21a4a47205.png'),
+(0, 'satya', 'upload/satya_64c2719f69286.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_latihan_grafik_mahasiswa`
+-- Table structure for table `tbl_latihan_grafik_mahasiswa`
 --
 
 CREATE TABLE `tbl_latihan_grafik_mahasiswa` (
@@ -53,10 +53,10 @@ CREATE TABLE `tbl_latihan_grafik_mahasiswa` (
   `nim` varchar(255) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `fakultas` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_latihan_grafik_mahasiswa`
+-- Dumping data for table `tbl_latihan_grafik_mahasiswa`
 --
 
 INSERT INTO `tbl_latihan_grafik_mahasiswa` (`id`, `nama`, `nim`, `jenis_kelamin`, `fakultas`) VALUES
@@ -84,7 +84,28 @@ INSERT INTO `tbl_latihan_grafik_mahasiswa` (`id`, `nama`, `nim`, `jenis_kelamin`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_latihan_map_lokasi`
+-- Table structure for table `tbl_latihan_invoice`
+--
+
+CREATE TABLE `tbl_latihan_invoice` (
+  `id` int(11) NOT NULL,
+  `banyaknya` int(11) NOT NULL,
+  `jenis_layanan` varchar(255) NOT NULL,
+  `satuan` decimal(10,0) NOT NULL,
+  `jumlah` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_latihan_invoice`
+--
+
+INSERT INTO `tbl_latihan_invoice` (`id`, `banyaknya`, `jenis_layanan`, `satuan`, `jumlah`) VALUES
+(1, 15, 'sadasdas', 1000000, 10000000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_latihan_map_lokasi`
 --
 
 CREATE TABLE `tbl_latihan_map_lokasi` (
@@ -93,10 +114,10 @@ CREATE TABLE `tbl_latihan_map_lokasi` (
   `nama_tempat` varchar(255) NOT NULL,
   `kategori` varchar(255) NOT NULL,
   `keterangan` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_latihan_map_lokasi`
+-- Dumping data for table `tbl_latihan_map_lokasi`
 --
 
 INSERT INTO `tbl_latihan_map_lokasi` (`id`, `lat_long`, `nama_tempat`, `kategori`, `keterangan`) VALUES
@@ -111,7 +132,7 @@ INSERT INTO `tbl_latihan_map_lokasi` (`id`, `lat_long`, `nama_tempat`, `kategori
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_latihan_pdf_karyawan`
+-- Table structure for table `tbl_latihan_pdf_karyawan`
 --
 
 CREATE TABLE `tbl_latihan_pdf_karyawan` (
@@ -119,10 +140,10 @@ CREATE TABLE `tbl_latihan_pdf_karyawan` (
   `karyawan_nama` varchar(255) NOT NULL,
   `karyawan_alamat` varchar(255) NOT NULL,
   `karyawan_email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_latihan_pdf_karyawan`
+-- Dumping data for table `tbl_latihan_pdf_karyawan`
 --
 
 INSERT INTO `tbl_latihan_pdf_karyawan` (`karyawan_id`, `karyawan_nama`, `karyawan_alamat`, `karyawan_email`) VALUES
@@ -139,53 +160,53 @@ INSERT INTO `tbl_latihan_pdf_karyawan` (`karyawan_id`, `karyawan_nama`, `karyawa
 --
 
 --
--- Indeks untuk tabel `tbl_latihan_digital_signature_employee_sign`
---
-ALTER TABLE `tbl_latihan_digital_signature_employee_sign`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `tbl_latihan_grafik_mahasiswa`
+-- Indexes for table `tbl_latihan_grafik_mahasiswa`
 --
 ALTER TABLE `tbl_latihan_grafik_mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tbl_latihan_map_lokasi`
+-- Indexes for table `tbl_latihan_invoice`
+--
+ALTER TABLE `tbl_latihan_invoice`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_latihan_map_lokasi`
 --
 ALTER TABLE `tbl_latihan_map_lokasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tbl_latihan_pdf_karyawan`
+-- Indexes for table `tbl_latihan_pdf_karyawan`
 --
 ALTER TABLE `tbl_latihan_pdf_karyawan`
   ADD PRIMARY KEY (`karyawan_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_latihan_digital_signature_employee_sign`
---
-ALTER TABLE `tbl_latihan_digital_signature_employee_sign`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_latihan_grafik_mahasiswa`
+-- AUTO_INCREMENT for table `tbl_latihan_grafik_mahasiswa`
 --
 ALTER TABLE `tbl_latihan_grafik_mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_latihan_map_lokasi`
+-- AUTO_INCREMENT for table `tbl_latihan_invoice`
+--
+ALTER TABLE `tbl_latihan_invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_latihan_map_lokasi`
 --
 ALTER TABLE `tbl_latihan_map_lokasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_latihan_pdf_karyawan`
+-- AUTO_INCREMENT for table `tbl_latihan_pdf_karyawan`
 --
 ALTER TABLE `tbl_latihan_pdf_karyawan`
   MODIFY `karyawan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
